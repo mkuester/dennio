@@ -83,6 +83,10 @@ body {
                 display: inline-block;*/
             }
 
+            #bio {
+                cursor: pointer;
+            }
+
 /* Footer */
 #footer {
     /*border: 2px solid red;*/
@@ -101,67 +105,65 @@ body {
         width: 50%;
         float: left;
     }
-        #footer-right div{
-            width: 100%;
-        }
-        #twitter {
-            background: url('../img/tt.png') no-repeat;
-            width: 6%;
-            height: 6%;
+        #footer-right img {
+            width: 8%;
+            height: 8%;
             border-radius: 15%;
             float: right;
+            cursor: pointer;
+            margin-right: 2%;
         }
-            #twitter span {
-                width: 80px;
-                height: 80px;
-            }
-        #facebook {
+        #facebook img {
             background: url('../img/fb.png') no-repeat;
-            width: 6%;
-            height: 6%;
-            border-radius: 15%;
-            float: right;
         }
-        #soundcloud {
+        #soundcloud img {
             background: url('../img/sc.png') no-repeat;
-            width: 6%;
-            height: 6%;
-            border-radius: 15%;
-            float: right;
         }
-        #youtube {
+        #youtube img {
             background: url('../img/yt.png') no-repeat;
-            width: 6%;
-            height: 6%;
-            border-radius: 15%;
-            float: right;
         }
-        #mixcloud {
+        #mixcloud img {
             background: url('../img/mc.png') no-repeat;
-            width: 6%;
-            height: 6%;
-            border-radius: 15%;
-            float: right;
         }
-        .toggler {
-            position: relative;
+        #lang_de img {
+            float: left;
         }
-        #effect2 {
-            position: relative;
-            width: 40%;
-            padding: 1em;
-            letter-spacing: 0;
-            font-size: 1.2em;
-            border: 1px solid #ffffff;
-            background: #eee;
-            color: #333;
+        #lang_en img {
+            float: left;
         }
-        .newClass {
-            text-indent: 40px;
-            letter-spacing: .4em;
-            width: 410px;
-            height: 100px;
-            padding: 30px;
-            margin: 10px;
-            font-size: 1.6em
-        }
+
+    #mp {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    #impressum {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+
+
+.toggler {
+    position: relative;
+}
+#effect2 {
+    position: relative;
+    width: 40%;
+    padding: 1em;
+    letter-spacing: 0;
+    font-size: 1.2em;
+    border: 1px solid #ffffff;
+    background: #eee;
+    color: #333;
+}
+.newClass {
+    text-indent: 40px;
+    letter-spacing: .4em;
+    width: 410px;
+    height: 100px;
+    padding: 30px;
+    margin: 10px;
+    font-size: 1.6em
+}

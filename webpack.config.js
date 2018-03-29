@@ -5,9 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
     entry: {
-        dennio: './src/js/index.js',
-        print: './src/js/print.js',
-        config: './src/config.js'
+        dennio: './src/js/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
