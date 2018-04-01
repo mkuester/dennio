@@ -7,26 +7,26 @@
     </head>
     <body>
         <div id="navigation">
-            <div id="cssmenu">
+            <div id="cssnavi">
                 <ul>
-                    <li><a id="home" href='#'></a></li><!-- class="active" fuer aktiven Strich unter Menu-->
-                    <li><a id="acts" href='#' onclick="switchMenu(this)"><span></span></a></li>
-                    <li><a id="bio" href='#'><span>Biographie</span></a></li>
-                    <li><a id="music" href='#'><span>Musik</span></a></li>
-                    <li class='last'><a id="contact" href='#'><span>Kontakt</span></a></li>
+                    <li><a id="home" class="home" href='#'></a></li>
+                    <li><a id="acts" class="acts" href='#'></a></li>
+                    <li><a id="bio" class="bio" href='#'></a></li>
+                    <li><a id="music" class="music" href='#'></a></li>
+                    <li><a id="contact" class="contact" href='#'></a></li>
                 </ul>
             </div>
         </div>
         <div id="content">
             <div>
-                <div class="toggler" id="biodiv"><p id="bio">test1</p></div>
-                <div id="clickme">fade div 1</div>
-                <div id="fadediv">fade 2 divs</div>
-                <div id="div5">&nbsp;</div>
-                <div id="div6">&nbsp;</div>
+                <div id="div11"><a id="" class="" href='#'></a></div>
+                <div id="div12">&nbsp;</div>
+                <div id="div13" class="navigation"><p>Auftritte</p></div>
+                <div id="div15">&nbsp;</div>
+                <div id="div16">&nbsp;</div>
             </div>
             <div>
-                <div id="div21">&nbsp;</div>
+                <div id="div21" class="music"><p>Musik</p></div>
                 <div id="div22">&nbsp;</div>
                 <div id="div23">&nbsp;</div>
                 <div id="div24">&nbsp;</div>
@@ -41,14 +41,23 @@
             </div>
             <div>
                 <div id="div41">&nbsp;</div>
-                <div id="div42">&nbsp;</div>
-                <div id="div43">&nbsp;</div>
-                <div id="div44">&nbsp;</div>
-                <div id="div45">&nbsp;</div>
+                <div id="div42" class="contact">Kontakt</div>
+                <div style="display: none; border: 3px solid red; width: 60%;" id="div4X345">
+                    <p>Mit diesem Formular können Sie Kontakt mit mir aufnehmen...</p> <a onclick ="" href="#">X</a>
+                    <p>Betreff:</p>
+                    <input style="width: 80%; "type="text" name="mail.subject" />
+                    <textarea style="line-height: 20%; width: 60%;" type="text" name="mail.body">MailBody</textarea>
+                </div>
+                <div id="div43">&nbsp;1</div>
+                <div id="div44">&nbsp;2</div>
+                <div id="div45" class="bio">Biographie</div>
             </div>
             <div>
                 <div id="div51">&nbsp;</div>
                 <div id="div52">&nbsp;</div>
+                <div style="display: none; border: 3px solid red; width: 60%;" id="div5X345">
+                    <a href ="mailto:'+emailTo+'?cc='+emailCC+'&subject='+emailSub+'&body='+emailBody;">Send</a>
+                </div>
                 <div id="div53">&nbsp;</div>
                 <div id="div54">&nbsp;</div>
                 <div id="div55">&nbsp;</div>
@@ -63,6 +72,15 @@
             </div>
             <div id="footer-right">
                 <div>
+                    <a id="lang_de"></a>
+                </div>
+                <div>
+                    <a id="lang_en"></a>
+                </div>
+                <div>
+                    <a id="lang_es"></a>
+                </div>
+                <div>
                     <a id="youtube" href="https://www.youtube.com/user/dennioofficial" target="_blank"></a>
                 </div>
                 <div>
@@ -73,12 +91,6 @@
                 </div>
                 <div>
                     <a id="soundcloud" href="https://soundcloud.com/dennioofficial" target="_blank"></a>
-                </div>
-                <div>
-                    <a id="lang_en"></a>
-                </div>
-                <div>
-                    <a id="lang_de"></a>
                 </div>
             </div>
         </div>

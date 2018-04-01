@@ -20,4 +20,15 @@ languages = {
 
         en_footer_mp: 'Musicplayer',
         en_footer_impressum: 'Impressum',
+
+    /* ES */
+        /* Navigation */
+        es_menu_home: 'Página inicial',
+        es_menu_bio: 'Biografía',
+        es_menu_acts: 'Salida',
+        es_menu_music: 'Música',
+        es_menu_contact: 'Contacto',
+
+        es_footer_mp: 'Aparato m de música',
+        es_footer_impressum: 'Pie m de imprenta ',
 }

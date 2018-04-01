@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
     entry: {
@@ -26,10 +27,35 @@ const config = {
                 ]
             },
             {
+                test: /\.scss$/,
+                loader: "style-loader!css-loader!sass-loader"
+                /*use: [{
+                    loader: "style-loader!css-loader!sass-loader"
+                },
+                {
+                    loader: "css-loader", options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: "sass-loader", options: {
+                        sourceMap: true
+                    }
+                }]*/
+            },
+            {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     'file-loader'
                 ]
+            },
+            /*{
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader'
+            },*/
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=public/fonts/[name].[ext]'
             }
         ]
     },
@@ -40,8 +66,8 @@ const config = {
             title: 'Dennio Music'
         }),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
-
+        new webpack.HotModuleReplacementPlugin(),
+        /*new ExtractTextPlugin('public/style.scss')*/
     ]
 };
 
