@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+
+.idea/
+server.js
+src/img/bg.jpg
+dist/
+package-lock.json
