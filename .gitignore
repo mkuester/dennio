@@ -1,9 +1,10 @@
 # Dependency directories
 node_modules/
 
-
+#
 .idea/
+dist/
+
+# Test
 server.js
 src/img/bg.jpg
-dist/
-package-lock.json
