@@ -1,7 +1,3 @@
-import ld from 'lodash';
-    // Lodash, now imported by this script
-    //element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
 import '../css/style.scss';
 import '../css/navi.scss';
 
@@ -18,41 +14,40 @@ import icon_de from '../img/languages/de.png';
 import icon_en from '../img/languages/en.png';
 import icon_es from '../img/languages/es.png';
 
-import '../font/dennioFont.scss';
+import '../font/darkenstone.scss';
 
+
+$(document).ready(function() {
+    console.log("ready...");
+})
 
 init();
 
 function init() {
     setImages();
-    setLabel('de');
+    setLabel('de')
     prepareClickEvents();
-    prepareMenuItem(21, 4, 1);
-
-
-
-    $('#div11').click(function(e){
-        $('#div12').fadeOut('fast', function(){
-            $('#div12').replace('<div id="newDiv"></div>').fadeIn('fast');
-        });
-    });
 }
 
-$(document).ready(function() {
-    console.log("ready...");
-    console.log("ready!");
-})
-
+/* Setzt die Standart Click Events */
 function prepareClickEvents() {
-    /* Test */
-    $("#fadediv").click(function(e){
-        e.preventDefault();
-        $('#div5').fadeOut('slow', function(){
-            $('#div6').fadeIn('slow');
-        });
+    /* Menu Click Events */
+    $('#home').click(function(e){
+        $( "#content" ).load( "home.html #main" );
+    });
+    $('#acts').click(function(e){
+        $( "#content" ).load( "acts.html #main" );
+    });
+    $('#bio').click(function(e){
+        $( "#content" ).load( "bio.html #main" );
+    });
+    $('#music').click(function(e){
+        $( "#content" ).load( "music.html #main" );
+    });
+    $('#contact').click(function(e){
+        $( "#content" ).load( "contact.html #main" );
     });
 
-    $('')
 
     /* Language Flags */
     $("#lang_en").click(function(e){
@@ -65,107 +60,6 @@ function prepareClickEvents() {
         setLabel('es');
     });
 }
-
-function prepareMenuItem(openMenuItemPos, newDivW, newDivH) {
-    console.log('prepareMenuItem start');
-
-    /* 1 Versuch die Biographie in das Raster einzublenden */
-    /*$("#div" + openMenuItemPos).click(function() {
-        $("#div22").toggle("slide");
-        $("#div23").toggle("slide");
-        $("#div31").toggle("slide");
-        $("#div32").toggle("slide");
-        $("#div41").toggle("slide");
-        $("#div42").toggle("slide");
-        $("#div51").toggle("slide");
-        $("#div52").toggle("slide");
-
-        var newEle = document.createElement('div');
-        newEle.css("position", "absolute");
-        newEle.css("display", "block");
-        newEle.css("background-color", "red");
-        newEle.setAttribute("id", "newBio")
-        $("#content").append(newEle);
-        $("#newBio").toggle("slide");
-    });*/
-
-    /* 2 Versuch die Biographie in das Raster einzublenden */
-    $('.bio').click(function() {
-        $("#div21").fadeToggle('slow');
-        $("#div22").fadeToggle('slow');
-        $("#div23").fadeToggle('slow');
-        $("#div31").fadeToggle('slow');
-        $("#div32").fadeToggle('slow');
-        $("#div33").fadeToggle('slow');
-        $("#div41").fadeToggle('slow');
-        $("#div42").fadeToggle('slow');
-        $("#div43").fadeToggle('slow');
-        $("#div51").fadeToggle('slow');
-        $("#div52").fadeToggle('slow');
-        $("#div53").fadeToggle('slow');
-    });
-    $('.music').click(function() {
-        $("#div23").fadeToggle('slow');
-        $("#div24").fadeToggle('slow');
-        $("#div25").fadeToggle('slow');
-        $("#div33").fadeToggle('slow');
-        $("#div34").fadeToggle('slow');
-        $("#div35").fadeToggle('slow');
-        $("#div43").fadeToggle('slow');
-        $("#div44").fadeToggle('slow');
-        $("#div45").fadeToggle('slow');
-        $("#div53").fadeToggle('slow');
-        $("#div54").fadeToggle('slow');
-        $("#div55").fadeToggle('slow');
-    });
-    $('.acts').click(function() {
-        $("#div22").fadeToggle('slow');
-        $("#div23").fadeToggle('slow');
-        $("#div24").fadeToggle('slow');
-        $("#div32").fadeToggle('slow');
-        $("#div33").fadeToggle('slow');
-        $("#div34").fadeToggle('slow');
-        $("#div42").fadeToggle('slow');
-        $("#div43").fadeToggle('slow');
-        $("#div44").fadeToggle('slow');
-        $("#div52").fadeToggle('slow');
-        $("#div53").fadeToggle('slow');
-        $("#div54").fadeToggle('slow');
-    });
-    $('.contact').click(function() {
-        $('#div43').css("display", "none");
-        $('#div44').css("display", "none");
-        $('#div45').css("display", "none");
-        $('#div53').css("display", "none");
-        $('#div54').css("display", "none");
-        $('#div55').css("display", "none");
-        $('#div4X345').stop(true, true).fadeIn('fast');
-        $('#div5X345').stop(true, true).fadeIn('fast');
-    });
-    console.log('prepareMenuItem end')
-}
-
-$(window).click(function(ev) {
-    var targetId = $(ev.target).attr('id');
-
-
-    if((targetId != "div42") && (targetId != "div4X345") && (targetId != "div5X345") && (targetId != "null") && (typeof targetId != "undefined")) {
-        $('#div4X345').css("display", "none");
-        $('#div5X345').css("display", "none");
-
-        $('#div43').stop(true, true).fadeIn('fast');
-        $('#div44').stop(true, true).fadeIn('fast');
-        $('#div45').stop(true, true).fadeIn('fast');
-        $('#div53').stop(true, true).fadeIn('fast');
-        $('#div54').stop(true, true).fadeIn('fast');
-        $('#div55').stop(true, true).fadeIn('fast');
-
-
-
-    }
-});
-
-
 
 /* Setzt die Social Media/Lanuage Images fuer die Verlinkungen. */
 function setImages() {
@@ -219,28 +113,28 @@ function setImages() {
 function setLabel(lang) {
     /* Englisch */
     if (lang == 'en') {
-        $("#home").text(languages.en_menu_home);
-        $(".bio").text(languages.en_menu_bio);
-        $(".acts").text(languages.en_menu_acts);
-        $(".music").text(languages.en_menu_music);
-        $(".contact").text(languages.en_menu_contact);
-        $("#mp").text(languages.en_footer_mp);
-        $("#impressum").text(languages.en_footer_impressum);
+        $("#home").text(languages.en.menu_home);
+        $(".bio").text(languages.en.menu_bio);
+        $(".acts").text(languages.en.menu_acts);
+        $(".music").text(languages.en.menu_music);
+        $(".contact").text(languages.en.menu_contact);
+        $("#mp").text(languages.en.footer_mp);
+        $("#impressum").text(languages.en.footer_impressum);
     } else if (lang == 'es') {/* Spanisch */
-        $("#home").text(languages.es_menu_home);
-        $(".bio").text(languages.es_menu_bio);
-        $(".acts").text(languages.es_menu_acts);
-        $(".music").text(languages.es_menu_music);
-        $(".contact").text(languages.es_menu_contact);
-        $("#mp").text(languages.es_footer_mp);
-        $("#impressum").text(languages.es_footer_impressum);
+        $("#home").text(languages.es.menu_home);
+        $(".bio").text(languages.es.menu_bio);
+        $(".acts").text(languages.es.menu_acts);
+        $(".music").text(languages.es.menu_music);
+        $(".contact").text(languages.es.menu_contact);
+        $("#mp").text(languages.es.footer_mp);
+        $("#impressum").text(languages.es.footer_impressum);
     } else {/* Deutsch */
-        $("#home").text(languages.de_menu_home);
-        $(".bio").text(languages.de_menu_bio);
-        $(".acts").text(languages.de_menu_acts);
-        $(".music").text(languages.de_menu_music);
-        $(".contact").text(languages.de_menu_contact);
-        $("#mp").text(languages.de_footer_mp);
-        $("#impressum").text(languages.de_footer_impressum);
+        $("#home").text(languages.de.menu_home);
+        $(".bio").text(languages.de.menu_bio);
+        $(".acts").text(languages.de.menu_acts);
+        $(".music").text(languages.de.menu_music);
+        $(".contact").text(languages.de.menu_contact);
+        $("#mp").text(languages.de.footer_mp);
+        $("#impressum").text(languages.de.footer_impressum);
     }
 }

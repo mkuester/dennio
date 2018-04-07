@@ -28,7 +28,12 @@ const config = {
             },
             {
                 test: /\.scss$/,
-                loader: "style-loader!css-loader!sass-loader"
+                    use: [
+                        'style-loader',
+                        'css-loader',
+                        'sass-loader'
+                    ]
+
                 /*use: [{
                     loader: "style-loader!css-loader!sass-loader"
                 },
@@ -49,25 +54,52 @@ const config = {
                     'file-loader'
                 ]
             },
-            /*{
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file-loader'
-            },*/
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file?name=public/fonts/[name].[ext]'
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader?name=public/fonts/[name].[ext]'
             }
         ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: './src/index.html',
             title: 'Dennio Music'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'home.html',
+            template: './src/pages/home.html',
+            title: 'Home'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'bio.html',
+            template: './src/pages/bio.html',
+            title: 'Biographie'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: './src/pages/contact.html',
+            title: 'Contact'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'music.html',
+            template: './src/pages/music.html',
+            title: 'Music'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'acts.html',
+            template: './src/pages/acts.html',
+            title: 'Acts'
+        }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        /*new ExtractTextPlugin('public/style.scss')*/
     ]
 };
 

@@ -70,17 +70,17 @@
       -o-transition: width .25s;
       transition: width .25s;
     }
-/*#cssnavi ul li.last > a:after,
+#cssnavi ul li.last > a:after,
 #cssnavi ul li:last-child > a:after {
   display: none;
-}*/
-/*#cssnavi.align-right li.last > a:after,
+}
+#cssnavi.align-right li.last > a:after,
 #cssnavi.align-right li:last-child > a:after {
   display: block;
-}*/
-/*#cssnavi.align-right li:first-child a:after {
+}
+#cssnavi.align-right li:first-child a:after {
   display: none;
-}*/
+}
 
 
 /* Das ist der Part der sich ändert bei der Groesse des Bildschirms. */

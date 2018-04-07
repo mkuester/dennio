@@ -1,34 +1,35 @@
 languages = {
     /* DE */
         /* Navigation */
-        de_menu_home: 'StartSeite',
-        de_menu_bio: 'Biographie',
-        de_menu_acts: 'Auftritte',
-        de_menu_music: 'Musik',
-        de_menu_contact: 'Kontakt',
-
-        de_footer_mp: 'Musikplayer',
-        de_footer_impressum: 'Impressum',
-
+            de: {
+                menu_home: 'StartSeite',
+                menu_bio: 'Biographie',
+                menu_acts: 'Auftritte',
+                menu_music: 'Musik',
+                menu_contact: 'Kontakt',
+                footer_mp: 'Musikplayer',
+                footer_impressum: 'Impressum',
+                },
     /* EN */
         /* Navigation */
-        en_menu_home: 'Home',
-        en_menu_bio: 'Biography',
-        en_menu_acts: 'Acts',
-        en_menu_music: 'Music',
-        en_menu_contact: 'Contact',
-
-        en_footer_mp: 'Musicplayer',
-        en_footer_impressum: 'Impressum',
-
+            en: {
+                menu_home: 'Home',
+                menu_bio: 'Biography',
+                menu_acts: 'Acts',
+                menu_music: 'Music',
+                menu_contact: 'Contact',
+                footer_mp: 'Musicplayer',
+                footer_impressum: 'Impressum',
+            },
     /* ES */
         /* Navigation */
-        es_menu_home: 'Página inicial',
-        es_menu_bio: 'Biografía',
-        es_menu_acts: 'Salida',
-        es_menu_music: 'Música',
-        es_menu_contact: 'Contacto',
-
-        es_footer_mp: 'Aparato m de música',
-        es_footer_impressum: 'Pie m de imprenta ',
+            es: {
+                menu_home: 'Página inicial',
+                menu_bio: 'Biografía',
+                menu_acts: 'Salida',
+                menu_music: 'Música',
+                menu_contact: 'Contacto',
+                footer_mp: 'Aparato m de música',
+                footer_impressum: 'Pie m de imprenta'
+            }
 }
