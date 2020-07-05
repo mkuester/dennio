@@ -3,59 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>dennio</title>
+        <script src="bundle.js"></script>
+        <title>Dennio Music</title>
     </head>
+    <!-- background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat; -->
     <body>
-        <div id="navigation">
-            <div id="cssnavi">
-                <ul>
-                    <li><a id="home" class="home" href='#'>Startseite</a></li>
-                    <li><a id="acts" class="acts" href='#'>Auftritte</a></li>
-                    <li><a id="bio" class="bio" href='#'>Biographie</a></li>
-                    <li><a id="music" class="music" href='#'>Musik</a></li>
-                    <li><a id="contact" class="contact" href='#'>Kontakt</a></li>
-                </ul>
+        <div class="nav">
+            <div class="languages">
+                <img class="language" src="img/de.png" onClick="js.setLanguageDe()"/>
+                <img class="language" src="img/en.png" onClick="js.setLanguageEn()">
+                <img class="language" src="img/es.png" onClick="js.setLanguageEs()"/>
             </div>
         </div>
-        <div style="padding-top: 2%;" id="content">
-            <div id="parent">
-                <div id="child_1"><p style="align: left;" >Child 1</p></div>
-                <div id="child_2"><p style="align: right;" >Child 2</p></div>
-            </div>
-        </div>
-        <div id="footer" style="font: 0px DennioFont;">
-            <div id="footer-left">
-                <div>
-                    <div id="mp"><a href="http://soundcloud.com/oembed.json?url=http://soundcloud.com/crystalfighters"/></div>
-                    <div id="impressum">Impressum</div>
-                </div>
-                <iframe width="100%" height="100%" scroling="no" frameborder="no"
-                        src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F2042210&amp;auto_play=false&amp;show_artwork=true&amp;color=ff6c00">
-                </iframe>
-            </div>
-            <div id="footer-right">
-                <div>
-                    <a id="lang_de"></a>
-                </div>
-                <div>
-                    <a id="lang_en"></a>
-                </div>
-                <div>
-                    <a id="lang_es"></a>
-                </div>
-                <div>
-                    <a id="youtube" href="https://www.youtube.com/user/dennioofficial" target="_blank"></a>
-                </div>
-                <div>
-                    <a id="facebook" href="https://www.facebook.com/dennioofficial" target="_blank"></a>
-                </div>
-                <div>
-                    <a id="mixcloud" href="https://www.mixcloud.com/dennio/" target="_blank"></a>
-                </div>
-                <div>
-                    <a id="soundcloud" href="https://soundcloud.com/dennioofficial" target="_blank"></a>
-                </div>
-            </div>
+        <div class="content">
+            <div class="last-release">
+                <img class="cover-img" src="img/cover.png" />
+                <button class="cover-button"></button>
+             </div>
+             <div class="social">
+                <a target="_blank" href="https://www.facebook.com/dennioofficial">
+                    <img src="img/fb.png" />
+                </a>
+                <a target="_blank" href="https://www.mixcloud.com/dennio/">
+                    <img src="img/mc.png" />
+                </a>
+                <a target="_blank" href="https://soundcloud.com/dennioofficial">
+                    <img src="img/sc.png" />
+                </a>
+                <a target="_blank" href="https://soundcloud.com/dennioofficial" >
+                    <img src="img/yt.png" />
+                </a>
+             </div>
         </div>
     </body>
 </html>

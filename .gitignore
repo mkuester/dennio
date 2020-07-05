@@ -4,8 +4,3 @@ node_modules/
 #
 .idea/
 dist/
-info.txt
-
-# Test
-server.js
-src/img/bg.jpg
